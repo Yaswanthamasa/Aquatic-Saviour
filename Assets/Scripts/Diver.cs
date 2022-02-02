@@ -14,6 +14,8 @@ public class Diver : MonoBehaviour
 
     private Animator anim;
     private string SWIM_ANIMATION = "Swim";
+    private string ANCHOR = "Anchor";
+    private string MINE = "Mine";
 
     private void Awake()
     {
@@ -47,4 +49,18 @@ public class Diver : MonoBehaviour
     {
         anim.SetBool(SWIM_ANIMATION,true);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag(ANCHOR))
+        {
+            //isGrounded  = true;
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag(MINE))
+        {
+            //isGrounded  = true;
+            Destroy(gameObject);
+        }
+    } 
 }

@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     private GameObject spawnedEnemy;
     
     [SerializeField]
-    private Transform anchorPos, minePos;
+    private Transform anchorPos, minePos, plantPos;
 
     private int randomIndex;
     private int randomSide;

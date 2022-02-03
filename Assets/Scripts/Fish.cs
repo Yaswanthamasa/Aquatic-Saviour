@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fish1 : MonoBehaviour
+public class Fish : MonoBehaviour
 {
     [HideInInspector]
     public float speed;

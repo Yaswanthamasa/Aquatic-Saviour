@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Anchor : MonoBehaviour
 {
-
     [HideInInspector]
     public float speed;
     private Rigidbody2D body;

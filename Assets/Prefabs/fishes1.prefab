@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7373581503993244257}
   - component: {fileID: 7373581503993244259}
   - component: {fileID: 7373581503993244260}
+  - component: {fileID: 3412860793830551986}
   m_Layer: 0
   m_Name: fishes1
   m_TagString: Fishes1
@@ -131,3 +132,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3412860793830551986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373581503993244256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf4aa46650494880b1a50b8df90064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0

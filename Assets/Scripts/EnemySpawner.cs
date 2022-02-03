@@ -7,6 +7,15 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField]
     private GameObject[] enemyReference;
+    /*
+        Index - GameObject
+        0 - anchor
+        1 - mine
+        2 - 4 gold fish
+        3 - dead fish
+        4 - blue fish
+        5 - yellow fish
+    */
     private GameObject spawnedEnemy;
     //private GameObject spawnedFish;
     
@@ -46,10 +55,33 @@ public class EnemySpawner : MonoBehaviour
                 //spawnedFish.transform.position = anchorPos.position;
                 //spawnedFish.GetComponent<Fish1>().speed = -2f;
             }
-            else{
-                
-                spawnedEnemy.transform.position = top4Pos.position;
+            else if(randomIndex==3){
+                spawnedEnemy.transform.position = plantPos.position;
                 spawnedEnemy.GetComponent<Fish>().speed = -2f;
+            }
+            else if(randomIndex == 6 || randomIndex == 7){
+                spawnedEnemy.transform.position = minePos.position;
+                spawnedEnemy.GetComponent<Fish>().speed = -2f;
+            }
+            else{
+                int randomTop = Random.Range(0,4);
+                if(randomTop==0){
+                    spawnedEnemy.transform.position = top2Pos.position;
+                    spawnedEnemy.GetComponent<Fish>().speed = -2f;
+                }
+                else if(randomTop==1){
+                    spawnedEnemy.transform.position = top3Pos.position;
+                    spawnedEnemy.GetComponent<Fish>().speed = -2f;
+                }
+                else if(randomTop==2){
+                    spawnedEnemy.transform.position = top4Pos.position;
+                    spawnedEnemy.GetComponent<Fish>().speed = -2f;
+                }
+                else if(randomTop==3){
+                    spawnedEnemy.transform.position = top5Pos.position;
+                    spawnedEnemy.GetComponent<Fish>().speed = -2f;
+                }
+                
             }
         }
     }

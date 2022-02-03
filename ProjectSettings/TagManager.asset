@@ -8,6 +8,8 @@ TagManager:
   - Anchor
   - Tin1
   - Fishes1
+  - Fish
+  - AquaticPlants
   layers:
   - Default
   - TransparentFX

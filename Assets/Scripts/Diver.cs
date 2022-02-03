@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Diver : MonoBehaviour
 {
+
+    public Text GarbageCounter;
+    private int waste1 = 0;
+
+
     public float moveForce = 10f;
     public float jumpForce = 11f;
 
@@ -27,7 +33,7 @@ public class Diver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //garbageCounter = GameObject.Find("GarbageCounter");
     }
 
     // Update is called once per frame
@@ -62,5 +68,23 @@ public class Diver : MonoBehaviour
             //isGrounded  = true;
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Tin1")){
+            Collect(other.GetComponent<Garbage>());
+        }
     } 
+
+    private void Collect(Garbage collectible){
+        if(collectible.Collect()){
+                waste1++;
+                UpdateGUI();
+        }
+    }
+
+    private void UpdateGUI(){
+        //GarbageCounter.text = waste1.ToString();
+        GarbageCounter.GetComponent<UnityEngine.UI.Text>().text = waste1.ToString();
+    }
 }

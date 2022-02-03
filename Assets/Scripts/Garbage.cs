@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Garbage : MonoBehaviour
 {
+    private bool isCollected = false;
     [HideInInspector]
     public float speed;
     private Rigidbody2D body;
@@ -18,5 +19,14 @@ public class Garbage : MonoBehaviour
     void FixedUpdate()
     {
         body.velocity = new Vector2(speed, -0.5f);
+    }
+
+    public bool Collect(){
+        if(isCollected)
+            return false;
+        
+        isCollected = true;
+        Destroy(gameObject);
+        return true;
     }
 }

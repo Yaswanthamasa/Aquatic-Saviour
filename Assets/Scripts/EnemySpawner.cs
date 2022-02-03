@@ -37,6 +37,7 @@ public class EnemySpawner : MonoBehaviour
         while(true){
             yield return new WaitForSeconds(Random.Range(2,4));
             randomIndex = Random.Range(0,enemyReference.Length);
+            //randomIndex = 8;
             randomSide = Random.Range(0,2);
             //spawnedEnemy = Instantiate(enemyReference[randomIndex]);
             spawnedEnemy = Instantiate(enemyReference[randomIndex]);
@@ -59,9 +60,9 @@ public class EnemySpawner : MonoBehaviour
                 spawnedEnemy.transform.position = plantPos.position;
                 spawnedEnemy.GetComponent<Fish>().speed = -2f;
             }
-            else if(randomIndex == 6 || randomIndex == 7){
-                spawnedEnemy.transform.position = minePos.position;
-                spawnedEnemy.GetComponent<Fish>().speed = -2f;
+            else if(randomIndex>5){
+                spawnedEnemy.transform.position = anchorPos.position;
+                spawnedEnemy.GetComponent<Garbage>().speed = -2f;
             }
             else{
                 int randomTop = Random.Range(0,4);

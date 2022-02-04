@@ -27,7 +27,7 @@
 
 ### Backstory of the game in brief
 
-The player in the the very near future loses the people he care about to water pollution and commits to accomplish a painful task which is cleaning all the water in the world and vaccinating the fish in the process to avoid the Biomagnification and the it is upto the person who controls the game to make sure how good he completes the task.
+The player in the the very near future loses the people he care about to water pollution and commits to accomplish a painful task which is cleaning all the water in the world and vaccinating the fish in the process to avoid the Biomagnification. From here is what the game starts and the it is upto the person who controls the game to make sure how good he completes the task.
 
 ------------
 ## About the Game 
